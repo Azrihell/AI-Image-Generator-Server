@@ -1,0 +1,2 @@
+# Rename this file .env and update the variables with your own service providers. 
+MONGODB_URL='#'
