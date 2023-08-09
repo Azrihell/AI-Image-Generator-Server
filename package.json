@@ -9,7 +9,8 @@
   "bugs": "https://github.com/Azrihell/AI-Image-Generator-Server/issues",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "cloudinary": "^1.39.0",
