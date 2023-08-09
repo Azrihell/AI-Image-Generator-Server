@@ -20,10 +20,10 @@ app.get('/', async (req, res) => {
   })
 })
 
-app.listen(app.env.port, app.env.HOSTNAME, async () => {
+app.listen(app.env.PORT, app.env.HOSTNAME, async () => {
   try {
     connectDB(process.env.MONGODB_URL)
-    console.log(`Server running at http://${app.env.HOSTNAME}:${port}/`);
+    console.log(`Server running at http://${app.env.HOSTNAME}:${app.env.PORT}/`);
   } catch (error) {
     console.log(error)
   }
