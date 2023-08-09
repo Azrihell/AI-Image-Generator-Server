@@ -7,6 +7,7 @@
   "repository": "https://github.com/Azrihell/AI-Image-Generator-Server",
   "homepage": "https://github.com/Azrihell/AI-Image-Generator-Server",
   "bugs": "https://github.com/Azrihell/AI-Image-Generator-Server/issues",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
