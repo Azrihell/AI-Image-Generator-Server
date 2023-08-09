@@ -28,3 +28,7 @@ app.listen(app.env.PORT, app.env.HOSTNAME, async () => {
     console.log(error)
   }
 })
+
+
+// Export the Express API
+export default app
