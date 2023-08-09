@@ -1,4 +1,6 @@
 # Rename this file .env and update the variables with your own service providers. 
+PORT="8080"
+HOSTNAME="127.0.0.1"
 MONGODB_URL='#'
 OPENAI_API_KEY='#'
 CLOUDINARY_CLOUD_NAME='#'
