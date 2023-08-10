@@ -2,7 +2,7 @@
 const express = require('express')
 
 const server = express()
-const PORT = 4000
+server.env = require('dotenv').config().parsed
 
 
 server.get('/', (req, res) => {
@@ -13,8 +13,14 @@ server.get('/about', (req, res) => {
   res.send('This is my about route..... ')
 })
 
-server.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
+
+server.listen(server.env.PORT, async () => {
+  try {
+    // connectDB(process.env.MONGODB_URL)
+    console.log(`Server running at http://localhost:${server.env.PORT}`);
+  } catch (error) {
+    console.log(error)
+  }
 })
 
 
