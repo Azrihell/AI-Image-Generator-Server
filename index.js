@@ -26,26 +26,4 @@ const connectDB = (url) => {
 // // server.use('/api/v1/dalle', dalleRoutes)
 
 
-// Create the Express Server
-const server = express()
-server.use(express.json())
-server.use(express.urlencoded({ extended: true }))
-server.env = require('dotenv').config().parsed
-server.use(cors())
-
-
-// Create a default API route to return some useful server information
-server.get('/', async (req, res) => {
-  res.json({
-    version: pjson.version,
-    message: 'Hello form Az! This is the API service for my DALL-E like application. Enjoy 🥳',
-    url: process.env.MONGODB_URL
-  })
-})
-
-
-
-// Export the Express API
-module.exports = server
-
 

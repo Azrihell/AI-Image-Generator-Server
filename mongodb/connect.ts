@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 
-const connectDB = (url) => {
+export const connectDB = (url: string) => {
   mongoose.set('strictQuery', true)
   mongoose.connect(url)
     .then(() => console.log('connected to mongo'))
-    .catch((err) => {
+    .catch((error: any) => {
       console.error('failed to connect with mongo')
-      console.error(err)
+      console.error(error)
     })
 }
 
-module.exports = connectDB
+

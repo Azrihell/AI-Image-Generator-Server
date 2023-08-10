@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from "mongoose";
 
 const Post = new mongoose.Schema({
   name: { type: String, required: true },
@@ -6,6 +6,4 @@ const Post = new mongoose.Schema({
   photo: { type: String, required: true },
 })
 
-const PostSchema = mongoose.model('Post', Post)
-
-module.exports = PostSchema
+export const PostSchema = mongoose.model('Post', Post)
