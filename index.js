@@ -4,9 +4,6 @@ const express = require('express')
 const server = express()
 const PORT = 4000
 
-server.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
-})
 
 server.get('/', (req, res) => {
   res.send('Hey this is my API running 🥳')
@@ -15,6 +12,11 @@ server.get('/', (req, res) => {
 server.get('/about', (req, res) => {
   res.send('This is my about route..... ')
 })
+
+server.listen(PORT, () => {
+  console.log(`API listening on PORT ${PORT} `)
+})
+
 
 // Export the Express API
 module.exports = server
