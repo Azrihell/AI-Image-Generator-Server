@@ -18,7 +18,7 @@ server.get('/port', (req, res) => {
 })
 
 
-server.listen(3000, async () => {
+server.listen(process.env.PORT, async () => {
   try {
     // connectDB(process.env.MONGODB_URL)
     console.log(process.env)
