@@ -9,8 +9,8 @@ server.get('/', (req, res) => {
   res.send('Hey this is my API running 🥳')
 })
 
-server.get('/about', (req, res) => {
-  res.send('This is my about route..... ')
+server.get('/logs', (req, res) => {
+  res.send(JSON.stringify(process.env))
 })
 
 
