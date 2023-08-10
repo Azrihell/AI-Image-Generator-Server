@@ -17,7 +17,7 @@ server.get('/about', (req, res) => {
 server.listen(3000, async () => {
   try {
     // connectDB(process.env.MONGODB_URL)
-    console.log(`Server running at http://localhost:${server.env.PORT}`);
+    console.log(`Server running at http://localhost:3000`);
   } catch (error) {
     console.log(error)
   }
