@@ -7,7 +7,6 @@ const mongoose = require('mongoose')
 
 const connectDB = (url) => {
   console.log("TESTING")
-  return
   // mongoose.set('strictQuery', true)
   // mongoose.connect(url)
   //   .then(() => console.log('connected to mongo'))
@@ -44,16 +43,6 @@ server.get('/', async (req, res) => {
   })
 })
 
-
-// Start the express server. 
-server.listen(process.env.PORT, async () => {
-  try {
-    connectDB(process.env.MONGODB_URL)
-    console.log(`Server running at http://localhost:${process.env.PORT}`);
-  } catch (error) {
-    console.log(error)
-  }
-})
 
 
 // Export the Express API

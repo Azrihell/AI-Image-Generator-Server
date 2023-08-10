@@ -26,3 +26,7 @@ server.listen(process.env.PORT, async () => {
     console.log(error)
   }
 })
+
+
+// Export server for Vercel support
+export default server
