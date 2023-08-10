@@ -1,5 +1,8 @@
 import { Request, Response } from 'express'
 import { Configuration, OpenAIApi } from "openai"
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 
 export const DalleRoutes = (server: any) => {
   const configuration = new Configuration({
