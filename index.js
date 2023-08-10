@@ -1,9 +1,9 @@
 const cors = require('cors')
 const express = require('express')
 const pjson = require("./package.json")
-const connectDB = require( './mongodb/connect.js')
-const postRoutes = require( './routes/postRoutes.js')
-const dalleRoutes = require( './routes/dalleRoutes.js')
+// const connectDB = require( './mongodb/connect.js')
+// const postRoutes = require( './routes/postRoutes.js')
+// const dalleRoutes = require( './routes/dalleRoutes.js')
 
 const server = express()
 server.use(express.json({ limit: '50mb' }))
@@ -12,8 +12,8 @@ server.env = require('dotenv').config().parsed
 
 
 server.use(cors())
-server.use('/api/v1/post', postRoutes)
-server.use('/api/v1/dalle', dalleRoutes)
+// server.use('/api/v1/post', postRoutes)
+// server.use('/api/v1/dalle', dalleRoutes)
 
 
 server.get('/', async (req, res) => {
@@ -25,7 +25,7 @@ server.get('/', async (req, res) => {
 
 server.listen({ port: server.env.PORT }, async () => {
   try {
-    connectDB(process.env.MONGODB_URL)
+    // connectDB(process.env.MONGODB_URL)
     console.log(`Server running at http://localhost:${server.env.PORT}`);
   } catch (error) {
     console.log(error)
