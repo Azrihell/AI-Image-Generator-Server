@@ -1,4 +1,5 @@
 // Vercel requires cjs (commonJs) so we're going to have to use require() and module.exports in this project to create `function` server
+const cors = require('cors');
 const express = require('express')
 const pjson = require("./package.json")
 
@@ -15,10 +16,10 @@ const pjson = require("./package.json")
 
 // Create the Express Server
 const server = express()
-// server.use(express.json({ limit: '50mb' }))
-// server.use(express.urlencoded({ extended: true }))
+server.use(express.json())
+server.use(express.urlencoded({ extended: true }))
 server.env = require('dotenv').config().parsed
-// server.use(cors())
+server.use(cors())
 
 
 // Create a default API route to return some useful server information
