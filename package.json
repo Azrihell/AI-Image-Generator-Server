@@ -9,9 +9,10 @@
   "bugs": "https://github.com/Azrihell/AI-Image-Generator-Server/issues",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.ts",
-    "build": "rimraf build && tsc",
     "preview": "node build/index.js",
+    "server": "nodemon index.ts",
+    "build": "rimraf build && tsc",
+    "start": "node build/index.js",
     "ts.check": "tsc --project tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
