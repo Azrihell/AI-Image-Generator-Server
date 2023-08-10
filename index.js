@@ -13,6 +13,10 @@ server.get('/logs', (req, res) => {
   res.send(JSON.stringify(process.env))
 })
 
+server.get('/port', (req, res) => {
+  res.send(JSON.stringify(process.env.PORT))
+})
+
 
 server.listen(3000, async () => {
   try {
