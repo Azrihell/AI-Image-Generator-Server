@@ -1,23 +1,23 @@
 // index.js
 const express = require('express')
 
-const app = express()
+const server = express()
 const PORT = 4000
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `)
 })
 
-app.get('/', (req, res) => {
+server.get('/', (req, res) => {
   res.send('Hey this is my API running 🥳')
 })
 
-app.get('/about', (req, res) => {
+server.get('/about', (req, res) => {
   res.send('This is my about route..... ')
 })
 
 // Export the Express API
-module.exports = app
+module.exports = server
 
 
 // const cors = require('cors')
