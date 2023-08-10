@@ -3,7 +3,7 @@ import { Configuration, OpenAIApi } from "openai"
 
 export const DalleRoutes = (server: any) => {
   const configuration = new Configuration({
-    apiKey: server.env.OPENAI_API_KEY
+    apiKey: process.env.OPENAI_API_KEY
   })
   
   const openai = new OpenAIApi(configuration)
