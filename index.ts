@@ -25,8 +25,8 @@ server.get('/', (_req: Request, res: Response) => {
 
 
 // AZ: Import sub routes
-DalleRoutes(server)
-PostsRoutes(server)
+// DalleRoutes(server)
+// PostsRoutes(server)
 
 
 // AZ: Start the express server. 
