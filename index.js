@@ -2,7 +2,20 @@
 const cors = require('cors');
 const express = require('express')
 const pjson = require("./package.json")
-const connectDB = require('./mongodb/connect.js')
+const mongoose = require('mongoose')
+
+
+const connectDB = (url) => {
+  mongoose.set('strictQuery', true)
+  mongoose.connect(url)
+    .then(() => console.log('connected to mongo'))
+    .catch((err) => {
+      console.error('failed to connect with mongo')
+      console.error(err)
+    })
+}
+
+// const connectDB = require('./mongodb/connect.js')
 // const postRoutes = require( './routes/postRoutes.js')
 // const dalleRoutes = require( './routes/dalleRoutes.js')
 
