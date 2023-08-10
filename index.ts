@@ -25,15 +25,15 @@ server.get('/', (_req: Request, res: Response) => {
 
 
 // AZ: Import sub routes
-// DalleRoutes(server)
-// PostsRoutes(server)
+DalleRoutes(server)
+PostsRoutes(server)
 
 
 // AZ: Start the express server. 
-server.listen(process.env.PORT, async () => {
+server.listen(server.env.PORT, async () => {
   try {
     connectDB(server.env.MONGODB_URL)
-    console.log(`Server running at http://localhost:${process.env.PORT}`);
+    console.log(`Server running at http://localhost:${server.env.PORT}`);
   } catch (error) {
     console.log(error)
   }
