@@ -15,10 +15,10 @@ const pjson = require("./package.json")
 
 // Create the Express Server
 const server = express()
-server.use(express.json({ limit: '50mb' }))
-server.use(express.urlencoded({ extended: true }))
+// server.use(express.json({ limit: '50mb' }))
+// server.use(express.urlencoded({ extended: true }))
 server.env = require('dotenv').config().parsed
-server.use(cors())
+// server.use(cors())
 
 
 // Create a default API route to return some useful server information
