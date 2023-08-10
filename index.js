@@ -1,11 +1,19 @@
 // index.js
 const express = require('express')
-
+const pjson = require("./package.json")
 const server = express()
 server.env = require('dotenv').config().parsed
 
 
-server.get('/', (req, res) => {
+server.get('/', async (req, res) => {
+  res.json({
+    version: pjson.version,
+    message: 'Hello from DALL-E'
+  })
+})
+
+
+server.get('/test', (req, res) => {
   res.send('Hey this is my API running 🥳')
 })
 
@@ -21,8 +29,7 @@ server.get('/port', (req, res) => {
 server.listen(process.env.PORT, async () => {
   try {
     // connectDB(process.env.MONGODB_URL)
-    console.log(process.env)
-    console.log(`Server running at http://localhost:${3000}`);
+    console.log(`Server running at http://localhost:${process.env.PORT}`);
   } catch (error) {
     console.log(error)
   }
@@ -57,16 +64,3 @@ module.exports = server
 //     message: 'Hello from DALL-E'
 //   })
 // })
-
-// server.listen({ port: server.env.PORT }, async () => {
-//   try {
-//     // connectDB(process.env.MONGODB_URL)
-//     console.log(`Server running at http://localhost:${server.env.PORT}`);
-//   } catch (error) {
-//     console.log(error)
-//   }
-// })
-
-
-// // Export the Express API
-// module.exports = server
