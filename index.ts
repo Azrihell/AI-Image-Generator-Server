@@ -27,7 +27,7 @@ server.get('/', (_req: Request, res: Response) => {
 
 
 // AZ: Import sub routes
-// DalleRoutes(server)
+DalleRoutes(server)
 // PostsRoutes(server)
 
 
