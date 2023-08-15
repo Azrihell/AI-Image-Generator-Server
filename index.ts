@@ -22,7 +22,6 @@ server.get('/', (_req: Request, res: Response) => {
   res.status(200).json({
     version: pjson.version,
     message: 'Hello form Az! This is the API service for my DALL-E like application. Enjoy 🥳',
-    url: process.env.MONGODB_URL
   })
 })
 
