@@ -19,6 +19,7 @@ export const PostsRoutes = (server: any) => {
       res.status(500).json({ success: false, message: 'Fetching posts failed, please try again' })
     }
   })
+  
   server.post('/api/v1/post', async (req: Request, res: Response) => {
     try {
       const { name, prompt, photo } = req.body
@@ -31,7 +32,7 @@ export const PostsRoutes = (server: any) => {
       })
   
       res.status(200).json({ success: true, data: newPost })
-    } catch (err) {
+    } catch (error: any) {
       res.status(500).json({ success: false, message: 'Unable to create a post, please try again' })
     }
   })
