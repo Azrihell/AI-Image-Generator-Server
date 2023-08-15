@@ -1,6 +1,6 @@
 {
   "name": "ai-image-generator-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "ISC",
   "author": "https://github.com/Azrihell",
   "description": "The Server Side Construction for an AI Image Generator App",
