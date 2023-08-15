@@ -1,6 +1,8 @@
 import { Request, Response } from 'express'
 import { v2 as cloudinary } from 'cloudinary'
 import { PostSchema } from '../mongodb/models/post'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 export const PostsRoutes = (server: any) => {
   cloudinary.config({

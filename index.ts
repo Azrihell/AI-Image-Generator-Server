@@ -4,7 +4,8 @@ import { connectDB } from "./mongodb/connect"
 import { DalleRoutes } from "./api/routes-dalle"
 import { PostsRoutes } from "./api/routes-posts"
 import pjson from './package.json'
-require('dotenv').config().parsed
+import * as dotenv from 'dotenv'
+
 
 // AZ: Creating The Express Instance
 const server: any = express()
@@ -13,6 +14,7 @@ const server: any = express()
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
 server.use(cors())
+dotenv.config()
 
 // AZ: Creating a base route to provide a server version and to test the API is functional
 server.get('/', (_req: Request, res: Response) => {
