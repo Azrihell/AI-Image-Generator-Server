@@ -31,11 +31,13 @@ server.get('/', (_req: Request, res: Response) => {
 DalleRoutes(server)
 PostsRoutes(server)
 
+// AZ: Connect to Database
+connectDB(process.env.MONGODB_URL || "")
+
 
 // AZ: Start the express server. 
 server.listen(process.env.PORT, async () => {
   try {
-    connectDB(process.env.MONGODB_URL || "")
     console.log(`Server running at http://localhost:${process.env.PORT}`);
   } catch (error) {
     console.log(error)
