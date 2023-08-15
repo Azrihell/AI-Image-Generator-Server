@@ -1,6 +1,6 @@
 {
   "name": "ai-image-generator-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "ISC",
   "author": "https://github.com/Azrihell",
   "description": "The Server Side Construction for an AI Image Generator App",
@@ -9,7 +9,7 @@
   "bugs": "https://github.com/Azrihell/AI-Image-Generator-Server/issues",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon index.ts",
     "start": "ts-node index.ts",
     "build": "rimraf build && tsc",
     "preview": "node build/index.js",

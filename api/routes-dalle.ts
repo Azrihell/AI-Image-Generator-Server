@@ -10,7 +10,7 @@ export const DalleRoutes = (server: any) => {
   
   const openai = new OpenAIApi(configuration)
 
-  server.post('/api/dalle', async (req: Request, res: Response) => {
+  server.post('/api/v1/dalle', async (req: Request, res: Response) => {
     try {
       const { prompt } = req.body
       const aiResponse = await openai.createImage({

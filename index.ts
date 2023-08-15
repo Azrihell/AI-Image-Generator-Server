@@ -13,7 +13,7 @@ const server: any = express()
 // AZ: Adding Middleware Support
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
-server.use(cors({ credentials: true,origin: '*'}));
+server.use(cors({ credentials: true, origin: '*' }));
 dotenv.config()
 
 

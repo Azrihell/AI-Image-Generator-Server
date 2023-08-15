@@ -11,7 +11,7 @@ export const PostsRoutes = (server: any) => {
     api_secret: process.env.CLOUDINARY_API_SECRET,
   })
 
-  server.get('/api/posts', async (req: Request, res: Response) => {
+  server.get('/api/v1/posts', async (req: Request, res: Response) => {
     try {
       const posts = await PostSchema.find({})
       res.status(200).json({ success: true, data: posts })
@@ -19,7 +19,7 @@ export const PostsRoutes = (server: any) => {
       res.status(500).json({ success: false, message: 'Fetching posts failed, please try again' })
     }
   })
-  server.post('/api/post', async (req: Request, res: Response) => {
+  server.post('/api/v1/post', async (req: Request, res: Response) => {
     try {
       const { name, prompt, photo } = req.body
       const photoUrl = await cloudinary.uploader.upload(photo)
