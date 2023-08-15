@@ -1,3 +1,4 @@
+import cors from 'cors'
 import express, { Request, Response } from 'express'
 import { connectDB } from "./mongodb/connect"
 import { DalleRoutes } from "./api/routes-dalle"
@@ -12,15 +13,9 @@ const server: any = express()
 // AZ: Adding Middleware Support
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
+server.use(cors({ credentials: true,origin: '*'}));
 dotenv.config()
 
-// AZ: Custom CORS Support
-server.use((request: any, response: any, next:any) => {
-  response.header("Access-Control-Allow-Origin", "*")
-  response.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE")
-  response.header("Access-Control-Allow-Headers", "Content-Type, Accept, Authorization")
-  next()
-})
 
 // AZ: Creating a base route to provide a server version and to test the API is functional
 server.get('/', (_req: Request, res: Response) => {
