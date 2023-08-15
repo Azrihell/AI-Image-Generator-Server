@@ -10,6 +10,13 @@ export const DalleRoutes = (server: any) => {
   
   const openai = new OpenAIApi(configuration)
 
+  server.get('/api/v1/dalleTest', async (req: Request, res: Response) => {
+    res.status(200).json({
+      message: 'dalle test working',
+    })
+  })
+
+
   server.post('/api/v1/dalle', async (req: Request, res: Response) => {
     try {
       const { prompt } = req.body

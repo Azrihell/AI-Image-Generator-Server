@@ -11,6 +11,12 @@ export const PostsRoutes = (server: any) => {
     api_secret: process.env.CLOUDINARY_API_SECRET,
   })
 
+  server.get('/api/v1/postTest', async (req: Request, res: Response) => {
+    res.status(200).json({
+      message: 'post test working',
+    })
+  })
+
   server.get('/api/v1/posts', async (req: Request, res: Response) => {
     try {
       const posts = await PostSchema.find({})
