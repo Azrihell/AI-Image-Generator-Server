@@ -2,7 +2,7 @@
 The server contruction for a `Dalle` like clone
 
 ## View It Live
-If you just want to view and play with the application, you can do so [here](https://www.npmjs.com/).
+If you just want to view and play with the application, you can do so [here](https://ai-image-generator-server-lhdr3w9g0-azrihell.vercel.app/).
 
 ## Getting Started
 Inside the project directory run:
