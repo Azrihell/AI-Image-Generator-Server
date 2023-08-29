@@ -3,6 +3,7 @@ import { Configuration, OpenAIApi } from "openai"
 import * as dotenv from 'dotenv'
 dotenv.config()
 
+// Server: Define Route Export
 export const DalleRoutes = (server: any) => {
   const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY

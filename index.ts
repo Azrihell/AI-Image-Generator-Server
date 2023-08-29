@@ -1,8 +1,8 @@
 import cors from 'cors'
 import express, { Request, Response } from 'express'
-import { connectDB } from "./mongodb/connect"
-import { DalleRoutes } from "./api/routes-dalle"
-import { PostsRoutes } from "./api/routes-posts"
+import { connectDB } from './mongodb/connect'
+import { DalleRoutes } from './api/routes-dalle'
+import { PostsRoutes } from './api/routes-posts'
 import pjson from './package.json'
 import * as dotenv from 'dotenv'
 
@@ -16,7 +16,6 @@ server.use(express.urlencoded({ extended: true }))
 server.use(cors({ credentials: true, origin: '*' }));
 dotenv.config()
 
-
 // AZ: Creating a base route to provide a server version and to test the API is functional
 server.get('/', (_req: Request, res: Response) => {
   res.status(200).json({
@@ -25,14 +24,12 @@ server.get('/', (_req: Request, res: Response) => {
   })
 })
 
-
 // AZ: Import sub routes
 DalleRoutes(server)
 PostsRoutes(server)
 
 // AZ: Connect to Database
 connectDB(process.env.MONGODB_URL || "")
-
 
 // AZ: Start the express server. 
 server.listen(process.env.PORT, async () => {
@@ -42,7 +39,6 @@ server.listen(process.env.PORT, async () => {
     console.log(error)
   }
 })
-
 
 // AZ: Export the `server` instance as required for Vercel support
 export default server

@@ -4,6 +4,8 @@ import { PostSchema } from '../mongodb/models/post'
 import * as dotenv from 'dotenv'
 dotenv.config()
 
+
+// Server: Define Route Export
 export const PostsRoutes = (server: any) => {
   cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

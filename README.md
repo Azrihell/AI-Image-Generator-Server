@@ -10,7 +10,7 @@ Inside the project directory run:
 $ npm install
 $ npm start
 ```
-by default the application will run on `localhost:8000`.
+by default the application will run on `localhost:3000`.
 
 ### Project Requirements
 * [NPM](https://www.npmjs.com/)
